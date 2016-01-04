@@ -1,5 +1,6 @@
 var uuid = require('node-uuid');
 var faye = require('faye');
+var lodash = require('lodash');
 
     function createId() {
         var orderId = uuid.v4().replace(/-/g, '');
