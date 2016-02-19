@@ -21,6 +21,7 @@ var lodash = require('lodash');
             })
             self.publish(channel, lodash.extend(message, {replyTo: replyId}));
             setTimeout(function(){
+                subscription.cancel();
                 reject('timeout');
             }, timeout||5000);
         });
